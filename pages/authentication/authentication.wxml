@@ -1,0 +1,54 @@
+<!--pages/authentication/authentication.wxml-->
+
+<!--顶部提示-->
+<mp-toptips msg="{{toptipMessage}}" type="{{toptipType}}" show="{{toptipMessage}}"></mp-toptips>
+
+<view class="page">
+  <block wx:if="{{isDataBack}}">
+    <form bindsubmit="formSubmit" class="weui-form">
+      <view class="weui-form__text-area">
+        <view class="weui-form__title">用户信息</view>
+        <view class="weui-form__desc">请填写姓名与交大学号</view>
+      </view>
+      <view class="weui-form__control-area">
+        <view class="weui-cells__group weui-cells__group_form">
+            <view class="weui-cells weui-cells_form">
+              <view class="weui-cell">
+                <view class="weui-cell__hd"><label class="weui-label">姓名</label></view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" type="text" placeholder="请输入姓名" name="name"/>
+                </view>
+              </view>
+              <view class="weui-cell">
+                <view class="weui-cell__hd"><label class="weui-label">学号</label></view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" type="number" placeholder="请输入学号" name="studentID"/>
+                </view>
+              </view>
+            </view>
+        </view>
+      </view>
+      <view class="weui-form__opr-area">
+        <button formType="submit" type="primary" class="weui-btn">确定</button>
+      </view>
+      <!--
+      <view class="weui-form__extra-area">
+        <view class="weui-footer">
+          <view class="weui-footer__links">
+            <navigator href="javascript:void(0);" class="weui-footer__link">底部链接文本</navigator>
+          </view>
+          <view class="weui-footer__text">Copyright © 2008-2019 weui.io</view>
+        </view>
+      </view>
+      -->
+    </form>
+  </block>
+  <block wx:if="{{isLoggedIn}}"></block>
+  <block wx:if="{{loginNotSuccess}}">
+    <view class="page__bd">
+      <view class="weui-loading__wrp">
+          登陆失败，请检查网络连接或重启小程序
+      </view>
+    </view>
+  </block>
+</view>

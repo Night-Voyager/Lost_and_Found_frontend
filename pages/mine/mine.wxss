@@ -1,0 +1,59 @@
+/* pages/mine/mine.wxss */
+.card_background_parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30rpx;
+}
+
+.card_background_child {
+  width: 700rpx;
+  height: 300rpx;
+  margin: auto;
+  border-radius: 30rpx;
+  box-shadow: 5rpx 5rpx 5rpx #888888;
+  position: relative;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: white;
+  position: absolute;
+  left: 60rpx;
+  top: 60rpx;
+  z-index: 5;
+}
+
+.userinfo {
+  color: white;
+  position: absolute;
+  top: 80rpx;
+  left: 250rpx;
+  font-weight: bold;
+}
+
+.weui-slidecells{
+  margin:8px;
+}
+.weui-slidecell{
+  background-color:#FFFFFF;
+  border-radius:8px;
+  padding:24px;
+  line-height:1.4;
+  font-size:17px;
+  color:rgba(0,0,0,.9);
+  /*text-align:right;*/
+}
+.weui-slidecell__tips{
+  color:rgba(0,0,0,.5);
+}
+
+.objectImage{
+  border-radius:8px;
+  width: 30px;
+  height: 30px;
+}

@@ -1,0 +1,28 @@
+<image src="../images/Slogan.png" mode="aspectFit" style="width:100%;height:200rpx"></image>
+
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">失物列表</view>
+            <view class="weui-panel__bd">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" wx:for="{{receivedData}}">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image wx:if="{{item.objectImage}}" class="weui-media-box__thumb" src="{{item.objectImage}}" />
+                        <image wx:else class="weui-media-box__thumb" src="{{icon60}}" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">{{item.objectName}}</view>
+                        <text class="weui-media-box__desc">所在地：{{item.place}}</text>
+                        <text class="weui-media-box__desc" wx:if="{{item.place=='个人'}}">{{item.pickerName}}（{{item.pickerContactWay}}：{{item.pickerContactNum}}）</text>
+                        <view class="weui-media-box__info">
+                        <view class="weui-media-box__info__meta">{{item.time}}</view>
+                    </view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!--圆形悬浮按钮-->
+<navigator class="hover-button" url='/pages/newFindOwner/newFindOwner'>+</navigator>

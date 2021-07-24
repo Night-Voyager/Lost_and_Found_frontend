@@ -1,0 +1,9 @@
+/* pages/authentication/authentication.wxss */
+page,.page{height:100%;}
+
+page{
+    background-color: #FFFFFF;
+}
+.weui-loading__wrp{
+  padding:16px;text-align:center;
+}

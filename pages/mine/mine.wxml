@@ -1,0 +1,35 @@
+<view class="page">
+  <!--身份卡片-->
+  <view class="card_background_parent">
+    <image src="../images/card_background.png" mode="scaleToFill" class="card_background_child"></image>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo">姓名：{{name}}\n学号：{{studentID}}</text>
+  </view>
+
+  <!---->
+    <view class="page__bd">
+
+      <view class="weui-cells__title">失物招领列表（左划可删除）</view>
+
+      <view class="weui-slidecells" wx:for="{{find_owner_list}}">
+        <mp-slideview buttons="{{item.slideButtons}}" icon="{{true}}" bindbuttontap="slideButtonTap">
+          <view class="weui-slidecell">
+            <!--image src="{{item.objectImage}}" mode="aspectFill" class="objectImage"></image-->{{item.objectName}}
+          </view>
+        </mp-slideview>
+      </view>
+
+      <view class="weui-cells__title">寻物启事列表（左划可删除）</view>
+
+      <view class="weui-slidecells" wx:for="{{find_object_list}}">
+        <mp-slideview buttons="{{item.slideButtons}}" icon="{{true}}" bindbuttontap="slideButtonTap">
+          <view class="weui-slidecell">
+            {{item.objectName}}
+          </view>
+        </mp-slideview>
+      </view>
+      
+    </view>
+
+  <!---->
+</view>

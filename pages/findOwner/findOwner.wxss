@@ -1,0 +1,15 @@
+/* pages/findOwner/findOwner.wxss */
+.hover-button{
+  height: 100rpx;
+  width: 100rpx;
+  background-color: #07C160;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 150rpx;
+  right: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
